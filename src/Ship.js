@@ -1,10 +1,13 @@
 class Ship {
-    constructor() {
-        this.startingPort = 'Dover';
+    constructor(port) {
+        this.currentPort = port;
         this.previousPort = null;
     }
     setSail() {
         this.previousPort = this.currentPort;
-        this.startingPort = null;
+        this.currentPort = null;
+    }
+    dock(port) {
+        this.currentPort = port;
     }}
 module.exports = Ship;
